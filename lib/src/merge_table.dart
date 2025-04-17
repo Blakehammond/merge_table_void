@@ -42,6 +42,9 @@ class MergeTable extends StatelessWidget {
 
   TableRow buildHeader() {
     return TableRow(
+      decoration: BoxDecoration(
+        color: Colors.grey[300],
+      ),
       children: List.generate(
         columns.length,
         (index) {
