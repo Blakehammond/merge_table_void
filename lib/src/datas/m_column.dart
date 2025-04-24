@@ -2,7 +2,7 @@ part of merge_table;
 
 abstract class BaseMColumn {
   final Text header;
-  final List<String>? columns;
+  final List<Text>? columns;
 
   bool get isMergedColumn => columns != null;
 
