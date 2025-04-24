@@ -7,6 +7,7 @@ class MergeTable extends StatelessWidget {
     required this.columns,
     required this.borderColor,
     required this.headerColor,
+    required this.rowColor,
     this.rowHeight,
     this.alignment = MergeTableAlignment.center,
   }) : super(key: key) {
@@ -67,6 +68,8 @@ class MergeTable extends StatelessWidget {
       (index) {
         List<BaseMRow> values = rows[index];
         return TableRow(
+          decoration:
+              BoxDecoration(color: rowColor != null ? rowColor!(index) : null),
           children: List.generate(
             values.length,
             (index) {
