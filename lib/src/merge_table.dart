@@ -21,6 +21,7 @@ class MergeTable extends StatelessWidget {
 
   final Color borderColor;
   final Color headerColor;
+  final Color Function(int index)? rowColor;
   final List<BaseMColumn> columns;
   final List<List<BaseMRow>> rows;
   final MergeTableAlignment alignment;
@@ -129,7 +130,7 @@ class MergeTable extends StatelessWidget {
     });
   }
 
-  Widget buildSingleColumn(String title) {
+  Widget buildSingleColumn(Text title) {
     return buildAlign(Text(title));
   }
 
