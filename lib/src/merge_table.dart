@@ -130,7 +130,7 @@ class MergeTable extends StatelessWidget {
     });
   }
 
-  Widget buildSingleColumn(Text title) {
+  Widget buildSingleColumn(String title) {
     return buildAlign(title);
   }
 
