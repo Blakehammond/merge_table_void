@@ -131,7 +131,7 @@ class MergeTable extends StatelessWidget {
   }
 
   Widget buildSingleColumn(Text title) {
-    return buildAlign(Text(title));
+    return buildAlign(title);
   }
 
   Widget buildAlign(Widget child) {
