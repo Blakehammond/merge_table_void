@@ -28,7 +28,8 @@ class MergeTable extends StatelessWidget {
   final double? rowHeight;
   late final Map<int, TableColumnWidth> columnWidths;
 
-  TableCellVerticalAlignment get defaultVerticalAlignment => alignment.tableAlignment;
+  TableCellVerticalAlignment get defaultVerticalAlignment =>
+      alignment.tableAlignment;
   AlignmentGeometry get alignmentGeometry => alignment.geometry;
 
   @override
@@ -130,7 +131,7 @@ class MergeTable extends StatelessWidget {
     });
   }
 
-  Widget buildSingleColumn(String title) {
+  Widget buildSingleColumn(Widget title) {
     return buildAlign(title);
   }
 
@@ -147,7 +148,8 @@ class MergeTable extends StatelessWidget {
     for (int i = 0; i < columns.length; i++) {
       BaseMColumn column = columns[i];
       if (column.isMergedColumn) {
-        columnWidths[i] = FlexColumnWidth(flexPerColumn * column.columns!.length);
+        columnWidths[i] =
+            FlexColumnWidth(flexPerColumn * column.columns!.length);
       } else {
         columnWidths[i] = FlexColumnWidth(flexPerColumn);
       }
